@@ -1,0 +1,196 @@
+/* custom properties */
+:root{
+    --blanco:#ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+
+
+/* GLOBALES */
+html{
+    font-size: 62.5% ;
+}
+body{
+    font-size: 16px;    /*1rem = 10px*/
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top,var(--grisClaro) 0%,var(--blanco) 100%); /*gradiente de abajo hacia arriba */
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 ;
+    text-align: center;
+}
+.boton{
+    color:var(--blanco);
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+}
+.sombra{
+    /* https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(112,112,112,0.54);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(112,112,112,0.54);
+    box-shadow: 0px 0px 5px 5px rgba(112,112,112,0.54);
+    
+    background-color: var(--blanco);
+    padding: 2rem;
+    width: 70%;
+    border-radius: 1rem;
+}
+/* TIPOGRAFÍA */
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* TÍTULOS */
+.titulo span{
+    font-size: 2rem;
+}
+
+/* NAVEGACIÓN PRINCIPAL */
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.navegacion-principal a{
+    color:var(--blanco);
+    text-decoration: none;
+    font-size:  1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+
+@media(min-width:768px) {
+    .navegacion-principal{
+        justify-content: space-between; 
+        flex-direction: row;
+    }
+
+}
+/* HERO */
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    height: 350px;
+    margin-bottom: 3rem;
+}
+.contenido-hero{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* con este código centras todo el div hijo en el div padre*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+
+/* SERVICIOS */
+@media(min-width:768px){
+    .servicios{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1rem;
+    }
+}
+.servicios h3{
+    color:var(--secundario);
+    font-weight: 300px  ;
+}
+.servicios p{
+    line-height: 2;
+    text-align: center;
+}
+.servicios .iconos{
+    margin: auto;
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*Alinea verticalmente */
+}
+/* CONTACTO */
+.formulario{
+    background-color: var(--gris);
+    width:80%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset{
+    border:none;
+}
+.formulario legend{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight:700;
+    margin-bottom: 2rem;
+    color:var(--primario);
+}
+@media(min-width:768px){
+    .contenedor-campo{
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
+    
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color:var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display:block;
+}
+
+.input-text{
+    width: 95%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.campo textarea{
+    height:90%;
+    width: 90%;
+
+}
